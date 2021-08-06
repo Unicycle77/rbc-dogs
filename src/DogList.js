@@ -11,8 +11,10 @@ export default class DogList extends Component {
           <div className="row">
             {this.props.dogs.map((dog) => (
               <div className="Dog col-md-6 col-lg-4 text-center" key={dog.name}>
+                <Link to={`/dogs/${dog.name}`}>
                   <img src={dog.src} alt={dog.name} />
                   <h2>{dog.name}</h2>
+                </Link>
               </div>
             ))}
           </div>
